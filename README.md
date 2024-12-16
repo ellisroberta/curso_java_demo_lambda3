@@ -48,3 +48,34 @@ pois as operações são diretamente associadas ao objeto que as invoca.
 - Composição: Métodos não estáticos podem ser combinados em sequências de operações mais complexas, permitindo a construção de
 comportamentos sofisticados a partir de operações simples.
 - Herança: Métodos não estáticos podem ser herdados por subclasses, permitindo a reutilização de comportamentos comuns e a extensão de funcionalidades existentes.
+
+### Desvantagens de Métodos Não Estáticos:
+- Acoplamento: Métodos não estáticos estão intimamente ligados ao estado de uma instância específica, o que pode aumentar o acoplamento entre classes.
+- Complexidade: Métodos não estáticos podem introduzir complexidade adicional ao código, especialmente quando operam em múltiplos objetos e dependem de estados compartilhados.
+- Dependências: Métodos não estáticos podem depender de outros métodos e atributos de uma classe, o que pode tornar a manutenção e a compreensão do código mais desafiadoras.
+- Escopo: Métodos não estáticos podem acessar e modificar o estado interno de um objeto, o que pode introduzir efeitos colaterais inesperados e dificultar a depuração de problemas.
+
+## Expressão lambda declarada
+
+- Expressão Lambda Declarada:
+  - A expressão lambda ```Consumer<Product> cons = p -> { p.setPrice(p.getPrice() * factor); };``` é declarada para representar a lógica de atualização do preço.
+  - p é o parâmetro que representa cada instância de Product na lista.
+  - O corpo da lambda atualiza o preço do produto multiplicando pelo fator definido (1.1).
+
+- Uso da Interface Consumer:
+  A interface Consumer<Product> é usada para definir uma operação que aceita um único argumento (neste caso, um Product) e não retorna nenhum resultado. Isso permite que a expressão lambda seja usada diretamente com o método forEach.
+
+- Comportamento do Programa:
+  O programa continua a funcionar da mesma maneira: ele cria uma lista de produtos, aplica a atualização de preços usando a expressão lambda e imprime os produtos com os novos preços.
+
+### Vantagens do Uso de Expressões Lambda:
+- Concisão: As expressões lambda permitem que você escreva implementações de interfaces funcionais de forma mais concisa.
+- Legibilidade: O código se torna mais fácil de ler e entender, pois a lógica é expressa diretamente onde é necessária.
+- Flexibilidade: Você pode facilmente alterar a lógica dentro da lambda sem precisar criar uma nova classe ou método.
+- Composição: Expressões lambda podem ser combinadas e passadas como argumentos para outros métodos, permitindo a construção de comportamentos complexos a partir de operações simples.
+- Reutilização: Expressões lambda podem ser reutilizadas em diferentes partes do código, promovendo a
+
+### Desvantagens do Uso de Expressões Lambda:
+- Complexidade: Expressões lambda podem tornar o código mais complexo e difícil de entender, especialmente quando usadas em contextos complexos ou aninhados.
+- Escopo: Expressões lambda podem acessar variáveis locais e de instância, o que pode introduzir efeitos colaterais e tornar o código menos previsível.
+- Depuração: Expressões lambda podem dificultar a depuração de problemas, pois a lógica está encapsulada em um contexto anônimo.
