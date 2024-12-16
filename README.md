@@ -79,3 +79,34 @@ comportamentos sofisticados a partir de operações simples.
 - Complexidade: Expressões lambda podem tornar o código mais complexo e difícil de entender, especialmente quando usadas em contextos complexos ou aninhados.
 - Escopo: Expressões lambda podem acessar variáveis locais e de instância, o que pode introduzir efeitos colaterais e tornar o código menos previsível.
 - Depuração: Expressões lambda podem dificultar a depuração de problemas, pois a lógica está encapsulada em um contexto anônimo.
+
+## Expressão lambda inline
+
+- Expressão Lambda Inline:
+  - A expressão lambda ```p -> p.setPrice(p.getPrice() * factor)``` é utilizada diretamente dentro do método forEach.
+Isso significa que não é necessário declarar uma variável separada para a expressão lambda.
+  - p representa cada instância de Product na lista, e a lógica dentro da lambda atualiza o preço multiplicando-o pelo fator definido (1.1).
+
+- Simplicidade e Clareza:
+  Utilizar uma expressão lambda inline torna o código mais conciso e fácil de entender, já que a lógica de atualização do preço é expressa diretamente na chamada do método forEach.
+
+- Comportamento do Programa:
+  O programa continua a funcionar da mesma maneira: ele cria uma lista de produtos, aplica a atualização de preços usando
+a expressão lambda inline e imprime os produtos com os novos preços.
+
+### Vantagens do Uso de Expressões Lambda Inline:
+- Concisão: Reduz a quantidade de código necessário, eliminando a necessidade de declarações intermediárias.
+- Legibilidade: Facilita a leitura do código, pois a lógica é apresentada de forma direta e clara.
+- Flexibilidade: Permite que a lógica seja facilmente alterada sem a necessidade de reestruturação significativa, já que tudo acontece em um único local.
+- Composição: Expressões lambda inline podem ser combinadas e aninhadas para criar comportamentos complexos de forma concisa.
+- Reutilização: Expressões lambda inline podem ser usadas em diferentes partes do código, promovendo a reutilização de lógica.
+- Performance: A eliminação de declarações intermediárias pode resultar em um código mais eficiente e com menos sobrecarga.
+- Manutenção: Facilita a manutenção do código, pois a lógica é apresentada de forma direta e não requer navegação entre diferentes partes do arquivo.
+- Depuração: A lógica é apresentada de forma clara e direta, facilitando a identificação e correção de problemas.
+- Escopo: A lógica é encapsulada em um contexto específico, o que pode reduzir a possibilidade de efeitos colaterais indesejados.
+- Simplicidade: Reduz a complexidade do código, tornando-o mais simples e fácil de entender.
+- Eficiência: Elimina a necessidade de declarações intermediárias, o que pode resultar em um código mais eficiente e direto.
+- Clareza: A lógica é expressa de forma direta e concisa, facilitando a compreensão do código.
+
+### Desvantagens do Uso de Expressões Lambda Inline:
+- Complexidade: Expressões lambda inline podem tornar o código mais complexo e difícil de entender, especialmente quando usadas em contextos complexos ou aninhados.

@@ -21,13 +21,8 @@ public class Program {
 
         double factor = 1.1; // Fator de aumento de preço
 
-        // Declara uma expressão lambda para atualizar o preço dos produtos
-        Consumer<Product> cons = p -> {
-            p.setPrice(p.getPrice() * factor); // Atualiza o preço do produto multiplicando pelo fator
-        };
-
-        // Aplica a expressão lambda a cada produto na lista
-        list.forEach(cons);
+        // Utiliza uma expressão lambda inline para atualizar o preço de cada produto
+        list.forEach(p -> p.setPrice(p.getPrice() * factor)); // Multiplica o preço de cada produto pelo fator
 
         // Imprime os produtos da lista após a atualização de preço
         list.forEach(System.out::println); // Exibe cada produto com o novo preço
