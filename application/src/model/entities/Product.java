@@ -32,6 +32,11 @@ public class Product {
         this.price = price; // Atualiza o preço do produto
     }
 
+    // Método estático que atualiza o preço do produto em 10%
+    public static void staticPriceUpdate(Product p) {
+        p.setPrice(p.getPrice() * 1.1);
+    }
+
     // Método que retorna uma representação em string do produto
     @Override
     public String toString() {
